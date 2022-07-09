@@ -16,6 +16,8 @@ const app = new Vue (
 
         data: {
             
+            activeIndex: 0,
+
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -30,6 +32,12 @@ const app = new Vue (
                     done: false
                 }
             ]
+        },
+
+        methods: {
+            removeToDo: function(index){
+                this.todos.splice(index, 1);
+            }
         }
     }
 )

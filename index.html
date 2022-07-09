@@ -25,10 +25,13 @@
 <body>
     <main id="root" class="container my-4">
         <ul class="list-group">
-            <li class="list-group-item d-flex" :class="{'text-decoration-line-through': element.done == true}"
+            <li class="list-group-item d-flex align-items-center" 
+                :class="{'text-decoration-line-through': element.done == true}"
                 v-for="(element, index) in todos">
+
                 {{ element.text }}
-                <a href="#" class="ms-auto ms_color_x"><i class="fa-solid fa-x"></i></a>
+
+                <button @click="removeToDo(index, 1)" class="btn ms-auto ms_color_x"><i class="fa-solid fa-x"></i></button>
             </li>
         </ul>
     </main>
