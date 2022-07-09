@@ -23,7 +23,15 @@
     <title>Vue To Do List</title>
 </head>
 <body>
-    
+    <main id="root" class="container my-4">
+        <ul class="list-group">
+            <li class="list-group-item d-flex" :class="{'text-decoration-line-through': element.done == true}"
+                v-for="(element, index) in todos">
+                {{ element.text }}
+                <a href="#" class="ms-auto ms_color_x"><i class="fa-solid fa-x"></i></a>
+            </li>
+        </ul>
+    </main>
 
     <script src="./js/main.js"></script>
 </body>
