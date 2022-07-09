@@ -18,6 +18,8 @@ const app = new Vue (
             
             activeIndex: 0,
 
+            newToDo: '',
+
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -37,6 +39,16 @@ const app = new Vue (
         methods: {
             removeToDo: function(index){
                 this.todos.splice(index, 1);
+            },
+
+            addNewToDo: function(toDoText) {
+                const newMessage = {
+                    text: toDoText,
+                    done: false
+                }
+                this.todos.push(newMessage);
+
+                this.newToDo = '';
             }
         }
     }

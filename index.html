@@ -24,7 +24,7 @@
 </head>
 <body>
     <main id="root" class="container my-4">
-        <ul class="list-group">
+        <ul class="list-group mb-4">
             <li class="list-group-item d-flex align-items-center" 
                 :class="{'text-decoration-line-through': element.done == true}"
                 v-for="(element, index) in todos">
@@ -34,6 +34,13 @@
                 <button @click="removeToDo(index, 1)" class="btn ms-auto ms_color_x"><i class="fa-solid fa-x"></i></button>
             </li>
         </ul>
+
+        
+        <div class="input-group mb-3">
+            <input v-model="newToDo" type="text" class="form-control" placeholder="Insert new Todo" aria-label="Username" aria-describedby="basic-addon1">
+            <button @click="addNewToDo(newToDo)" @keyUp.enter="addNewToDo(newToDo)" 
+            class="btn btn-outline-secondary" type="button" id="button-addon2">Add New</button>
+        </div>
     </main>
 
     <script src="./js/main.js"></script>
