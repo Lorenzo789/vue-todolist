@@ -22,9 +22,12 @@
 
     <title>Vue To Do List</title>
 </head>
-<body>
-    <main id="root" class="container my-4">
-        <ul class="list-group mb-4">
+<body class="ms_bg">
+    <main id="root" class="container">
+
+        <h1 class="fw-bold my-5 text-center text-white">Vue To Do List</h1>
+
+        <ul class="list-group mb-5">
             <li class="list-group-item d-flex align-items-center" 
                 :class="{'text-decoration-line-through': element.done == true}"
                 v-for="(element, index) in todos"
@@ -42,7 +45,7 @@
             type="text" class="form-control" placeholder="Insert new Todo" aria-label="Username" aria-describedby="basic-addon1">
 
             <button @click="addNewToDo(newToDo)" 
-            class="btn btn-outline-secondary" type="button" id="button-addon2">Add New</button>
+            class="btn btn-success" type="button" id="button-addon2">Add New</button>
         </div>
     </main>
 
