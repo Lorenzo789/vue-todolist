@@ -37,8 +37,10 @@
 
         
         <div class="input-group mb-3">
-            <input v-model="newToDo" type="text" class="form-control" placeholder="Insert new Todo" aria-label="Username" aria-describedby="basic-addon1">
-            <button @click="addNewToDo(newToDo)" @keyUp.enter="addNewToDo(newToDo)" 
+            <input v-model="newToDo" @keyUp.enter="addNewToDo(newToDo)"
+            type="text" class="form-control" placeholder="Insert new Todo" aria-label="Username" aria-describedby="basic-addon1">
+            
+            <button @click="addNewToDo(newToDo)" 
             class="btn btn-outline-secondary" type="button" id="button-addon2">Add New</button>
         </div>
     </main>
